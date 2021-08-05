@@ -11,7 +11,6 @@ contract InheritanceExample is Owner {
     constructor() {
         owner = msg.sender;
         tokenBalance[owner] = 100;
-        
     }
     
     function createNewToken() public isOwner {
