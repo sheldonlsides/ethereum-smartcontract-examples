@@ -32,7 +32,11 @@ contract Allowance is Ownable {
     }
     
     function renounceOwnership() public view override onlyOwner {
-        revert("You can't renounceOwnership in this smart contract"); //not possible with this smart contract
+        revert("You can't renounceOwnership in this smart contract"); 
+    }
+    
+    function transferOwnership(address newOwner) public view override onlyOwner {
+        revert("You can't transfer Ownership of this smart contract"); 
     }
 }
 
